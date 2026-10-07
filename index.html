@@ -1,0 +1,695 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BODY WORKS FITNESS STUDIO | Behala, Kolkata</title>
+    <meta name="description" content="Body Works Fitness Studio located in Behala, Kolkata. Rated 4.6 stars across 398 public reviews. Offering HIIT, CrossFit, Dance Fitness, and Private Lessons. Open Monday to Saturday.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lime: '#CCFF00',
+                            limeHover: '#b8e600',
+                            dark: '#0A0A0C',
+                            surface: '#121216',
+                            card: '#18181F',
+                            border: '#272732',
+                            muted: '#9496A1'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Oswald', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts for High-Impact Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0C;
+            color: #F3F4F6;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.02em;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(rgba(204, 255, 0, 0.08) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.03) 1px, #0A0A0C 1px);
+            background-size: 40px 40px, 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        .accent-glow {
+            box-shadow: 0 0 40px -10px rgba(204, 255, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-lime selection:text-black">
+
+    <!-- Top Notice / Quick Bar -->
+    <header class="sticky top-0 z-50 bg-[#0A0A0C]/90 backdrop-blur-md border-b border-brand-border/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Title & Location -->
+                <a href="#" class="flex flex-col">
+                    <span class="font-heading text-xl sm:text-2xl font-bold tracking-wider text-white uppercase">
+                        BODY WORKS <span class="text-brand-lime">FITNESS STUDIO</span>
+                    </span>
+                    <span class="text-[11px] uppercase tracking-widest text-brand-muted font-medium flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-lime inline-block"></span>
+                        Behala · Kolkata
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="text-gray-300 hover:text-brand-lime transition-colors">Overview</a>
+                    <a href="#services" class="text-gray-300 hover:text-brand-lime transition-colors">Services</a>
+                    <a href="#feedback" class="text-gray-300 hover:text-brand-lime transition-colors">Reputation</a>
+                    <a href="#schedule" class="text-gray-300 hover:text-brand-lime transition-colors">Hours</a>
+                    <a href="#contact" class="text-gray-300 hover:text-brand-lime transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header Action Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:+919875476552" class="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg border border-brand-border bg-brand-card hover:bg-brand-border transition-colors text-white">
+                        <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-lime"></i>
+                        <span>098754 76552</span>
+                    </a>
+                    <a href="https://maps.google.com/?q=47+Basudevpur+Road,+Behala,+beside+Bakultala+Bazar,+Kolkata,+West+Bengal+700061" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-lg bg-brand-lime text-black hover:bg-brand-limeHover transition-all font-bold">
+                        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                        <span>Visit</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-brand-card focus:outline-none" aria-label="Toggle navigation menu">
+                    <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-brand-border bg-brand-surface px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-base text-gray-300 hover:text-brand-lime mobile-nav-link">Overview</a>
+            <a href="#services" class="block py-2 text-base text-gray-300 hover:text-brand-lime mobile-nav-link">Services</a>
+            <a href="#feedback" class="block py-2 text-base text-gray-300 hover:text-brand-lime mobile-nav-link">Reputation</a>
+            <a href="#schedule" class="block py-2 text-base text-gray-300 hover:text-brand-lime mobile-nav-link">Hours & Timings</a>
+            <a href="#contact" class="block py-2 text-base text-gray-300 hover:text-brand-lime mobile-nav-link">Directions & Contact</a>
+            <div class="pt-4 flex flex-col gap-2.5">
+                <a href="tel:+919875476552" class="flex items-center justify-center gap-2 py-3 text-sm font-semibold uppercase tracking-wider rounded-lg border border-brand-border bg-brand-card text-white">
+                    <i data-lucide="phone" class="w-4 h-4 text-brand-lime"></i>
+                    Call 098754 76552
+                </a>
+                <a href="https://wa.me/919875476552" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 text-sm font-semibold uppercase tracking-wider rounded-lg bg-[#25D366] text-white font-bold">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section class="relative hero-pattern pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden border-b border-brand-border">
+        <!-- Ambient decorative glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-lime/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left: Hero Headline & Action Points -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-card border border-brand-border mb-6">
+                        <span class="inline-block w-2 h-2 rounded-full bg-brand-lime animate-pulse"></span>
+                        <span class="text-xs font-semibold tracking-widest uppercase text-gray-300">BEHALA · KOLKATA</span>
+                    </div>
+
+                    <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-tight text-white leading-tight mb-4">
+                        BODY WORKS <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-lime via-white to-gray-400">FITNESS STUDIO</span>
+                    </h1>
+
+                    <p class="font-heading text-2xl sm:text-3xl font-semibold text-gray-200 uppercase tracking-wide mb-5">
+                        Train with purpose. Build yourself.
+                    </p>
+
+                    <p class="text-base sm:text-lg text-brand-muted leading-relaxed max-w-2xl mb-8">
+                        Dedicated fitness training studio serving members in Behala, Kolkata. Centrally located beside Bakultala Bazar on Basudevpur Road, offering a focused environment for your personal workout and routine.
+                    </p>
+
+                    <!-- CTAs Requested -->
+                    <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 w-full sm:w-auto">
+                        <a href="tel:+919875476552" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-brand-lime text-black font-heading text-lg font-bold uppercase tracking-wider rounded-xl hover:bg-brand-limeHover transition-all shadow-lg hover:shadow-brand-lime/20 transform hover:-translate-y-0.5">
+                            <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            Call The Studio
+                        </a>
+                        <a href="https://maps.google.com/?q=47+Basudevpur+Road,+Behala,+beside+Bakultala+Bazar,+Kolkata,+West+Bengal+700061" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-brand-card text-white border border-brand-border font-heading text-lg font-bold uppercase tracking-wider rounded-xl hover:bg-brand-border transition-all">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-lime"></i>
+                            Get Directions
+                        </a>
+                        <a href="https://wa.me/919875476552" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#1F2D24] text-[#25D366] border border-[#25D366]/40 font-heading text-lg font-bold uppercase tracking-wider rounded-xl hover:bg-[#25D366] hover:text-black transition-all">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Gym Presentation Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-card p-2 shadow-2xl">
+                        <!-- High aesthetic dark workout atmosphere representation -->
+                        <div class="relative h-80 sm:h-96 rounded-xl overflow-hidden bg-brand-surface">
+                            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" 
+                                 alt="Gym workout environment at Body Works Fitness Studio" 
+                                 class="w-full h-full object-cover object-center filter brightness-90 contrast-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent"></div>
+                            
+                            <div class="absolute bottom-4 left-4 right-4 bg-brand-surface/90 backdrop-blur-md p-4 rounded-xl border border-brand-border flex items-center justify-between">
+                                <div>
+                                    <div class="text-xs text-brand-muted uppercase font-semibold">Location Landmark</div>
+                                    <div class="text-sm font-semibold text-white">Beside Bakultala Bazar, Behala</div>
+                                </div>
+                                <span class="px-2.5 py-1 text-xs font-semibold rounded bg-brand-lime/10 border border-brand-lime/30 text-brand-lime">
+                                    Open Mon–Sat
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Verified Stats Section -->
+    <section id="about" class="py-12 bg-brand-surface border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Stat 1: Google Rating -->
+                <div class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-brand-border/80 flex items-center space-x-5 hover:border-brand-lime/40 transition-colors">
+                    <div class="w-14 h-14 rounded-xl bg-brand-lime/10 border border-brand-lime/20 flex items-center justify-center shrink-0">
+                        <i data-lucide="star" class="w-7 h-7 text-brand-lime fill-brand-lime"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-baseline space-x-2">
+                            <span class="font-heading text-4xl sm:text-5xl font-bold text-white tracking-tight">4.6</span>
+                            <span class="text-brand-muted text-sm font-medium">/ 5.0</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 font-medium uppercase tracking-wider mt-1">Public Listing Rating</p>
+                    </div>
+                </div>
+
+                <!-- Stat 2: Verified Public Reviews -->
+                <div class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-brand-border/80 flex items-center space-x-5 hover:border-brand-lime/40 transition-colors">
+                    <div class="w-14 h-14 rounded-xl bg-brand-lime/10 border border-brand-lime/20 flex items-center justify-center shrink-0">
+                        <i data-lucide="users" class="w-7 h-7 text-brand-lime"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-baseline space-x-2">
+                            <span class="font-heading text-4xl sm:text-5xl font-bold text-white tracking-tight">398</span>
+                            <span class="text-brand-lime text-sm font-semibold">+</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 font-medium uppercase tracking-wider mt-1">Public Listing Reviews</p>
+                    </div>
+                </div>
+
+                <!-- Stat 3: Mon-Sat Listed Hours -->
+                <div class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-brand-border/80 flex items-center space-x-5 hover:border-brand-lime/40 transition-colors">
+                    <div class="w-14 h-14 rounded-xl bg-brand-lime/10 border border-brand-lime/20 flex items-center justify-center shrink-0">
+                        <i data-lucide="clock" class="w-7 h-7 text-brand-lime"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-baseline space-x-1">
+                            <span class="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">6 AM–10 PM</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-400 font-medium uppercase tracking-wider mt-1">Listed Monday–Saturday Hours</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Genuine Services Section -->
+    <section id="services" class="py-20 bg-brand-dark border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+                <div>
+                    <span class="text-brand-lime uppercase text-xs tracking-widest font-bold">Training Programs</span>
+                    <h2 class="font-heading text-3xl sm:text-5xl font-bold uppercase tracking-tight text-white mt-1">
+                        Services
+                    </h2>
+                </div>
+                <p class="text-brand-muted text-sm sm:text-base max-w-md mt-4 md:mt-0">
+                    Officially listed fitness formats and workout programs offered at Body Works Fitness Studio.
+                </p>
+            </div>
+
+            <!-- 4 Verified Genuine Services -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1: HIIT -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-lime/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center mb-6 text-brand-lime group-hover:scale-110 transition-transform">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold uppercase text-white mb-3">
+                            HIIT Exercise Classes
+                        </h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">
+                            High-Intensity Interval Training sessions combining timed cardiovascular and muscular conditioning intervals to develop stamina and general fitness.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-brand-border/60 flex items-center text-xs font-semibold uppercase tracking-wider text-brand-lime">
+                        <span>Group Training</span>
+                    </div>
+                </div>
+
+                <!-- Service 2: CrossFit -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-lime/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center mb-6 text-brand-lime group-hover:scale-110 transition-transform">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold uppercase text-white mb-3">
+                            CrossFit
+                        </h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">
+                            Varied functional movement training incorporating strength work, bodyweight routines, and metabolic conditioning in an energetic gym setting.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-brand-border/60 flex items-center text-xs font-semibold uppercase tracking-wider text-brand-lime">
+                        <span>Strength & Conditioning</span>
+                    </div>
+                </div>
+
+                <!-- Service 3: Dance Fitness Classes -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-lime/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center mb-6 text-brand-lime group-hover:scale-110 transition-transform">
+                            <i data-lucide="music" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold uppercase text-white mb-3">
+                            Dance Fitness Classes
+                        </h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">
+                            Rhythmic cardiovascular workout routines set to upbeat music, designed to make aerobic conditioning enjoyable and physically active.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-brand-border/60 flex items-center text-xs font-semibold uppercase tracking-wider text-brand-lime">
+                        <span>Aerobic Movement</span>
+                    </div>
+                </div>
+
+                <!-- Service 4: Private Lessons -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-lime/50 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-border flex items-center justify-center mb-6 text-brand-lime group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold uppercase text-white mb-3">
+                            Private Lessons
+                        </h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">
+                            One-on-one training sessions focused on individual exercise instruction, workout form guidance, and customized pacing for personal development.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-brand-border/60 flex items-center text-xs font-semibold uppercase tracking-wider text-brand-lime">
+                        <span>Individual Guidance</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Direct Contact Prompt for Services -->
+            <div class="mt-12 p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="info" class="w-5 h-5 text-brand-lime shrink-0"></i>
+                    <p class="text-sm text-gray-300">
+                        Interested in class times or scheduling private lessons? Speak directly with the studio.
+                    </p>
+                </div>
+                <a href="tel:+919875476552" class="px-5 py-2.5 rounded-lg bg-brand-card hover:bg-brand-border border border-brand-border text-xs uppercase tracking-wider font-semibold text-white shrink-0 transition-colors">
+                    Inquire via Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Public Reviews & Member Feedback Summary -->
+    <section id="feedback" class="py-20 bg-brand-surface border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Aggregate Score Column -->
+                <div class="lg:col-span-5 flex flex-col items-start bg-brand-card p-8 sm:p-10 rounded-3xl border border-brand-border">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-brand-lime mb-2">Member Feedback Summary</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-white mb-6">
+                        Verified Listing Reputation
+                    </h2>
+
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="font-heading text-6xl font-bold text-white">4.6</span>
+                        <div>
+                            <div class="flex text-brand-lime mb-1">
+                                <i data-lucide="star" class="w-5 h-5 fill-brand-lime"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-brand-lime"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-brand-lime"></i>
+                                <i data-lucide="star" class="w-5 h-5 fill-brand-lime"></i>
+                                <i data-lucide="star-half" class="w-5 h-5 fill-brand-lime"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-300">Based on 398 public reviews</span>
+                        </div>
+                    </div>
+
+                    <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                        Body Works Fitness Studio has established a strong public track record among gym-goers and fitness enthusiasts in Behala, Kolkata.
+                    </p>
+
+                    <a href="https://maps.google.com/?q=47+Basudevpur+Road,+Behala,+beside+Bakultala+Bazar,+Kolkata,+West+Bengal+700061" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-brand-lime hover:underline">
+                        <span>View Google Listing Details</span>
+                        <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <!-- Themes Summaries (Strictly no fabricated reviews/quotes) -->
+                <div class="lg:col-span-7">
+                    <h3 class="font-heading text-xl uppercase tracking-wider text-gray-300 mb-6 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brand-lime inline-block"></span>
+                        Key Themes From Public Review Feedback
+                    </h3>
+
+                    <div class="space-y-4">
+                        <!-- Theme 1 -->
+                        <div class="p-6 rounded-2xl bg-brand-card/70 border border-brand-border">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="p-2 rounded-lg bg-brand-surface text-brand-lime">
+                                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-heading text-lg font-bold text-white uppercase">
+                                    Clean and Well-Equipped Training Environment
+                                </h4>
+                            </div>
+                            <p class="text-brand-muted text-sm leading-relaxed pl-11">
+                                Public feedback frequently emphasizes the cleanliness, orderly maintenance of training areas, and availability of essential workout equipment for daily fitness routines.
+                            </p>
+                        </div>
+
+                        <!-- Theme 2 -->
+                        <div class="p-6 rounded-2xl bg-brand-card/70 border border-brand-border">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="p-2 rounded-lg bg-brand-surface text-brand-lime">
+                                    <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-heading text-lg font-bold text-white uppercase">
+                                    Helpful & Friendly Trainers and Staff
+                                </h4>
+                            </div>
+                            <p class="text-brand-muted text-sm leading-relaxed pl-11">
+                                Reviewers consistently recognize the approachable, supportive, and knowledgeable manner of the gym instructors and staff in guiding members through workouts.
+                            </p>
+                        </div>
+
+                        <!-- Theme 3 -->
+                        <div class="p-6 rounded-2xl bg-brand-card/70 border border-brand-border">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="p-2 rounded-lg bg-brand-surface text-brand-lime">
+                                    <i data-lucide="smile" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="font-heading text-lg font-bold text-white uppercase">
+                                    Positive Member Experience
+                                </h4>
+                            </div>
+                            <p class="text-brand-muted text-sm leading-relaxed pl-11">
+                                Members commonly cite a motivating community atmosphere, comfortable workout conditions, and convenient Behala neighborhood access as primary positive factors.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 text-[12px] text-gray-500 italic">
+                        * Note: The points above represent an accurate summary of recurring themes compiled from the 398 public reviews, not individual verbatim quotes.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule & Hours Section -->
+    <section id="schedule" class="py-16 bg-brand-dark border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto bg-brand-card rounded-3xl border border-brand-border p-6 sm:p-10">
+                <div class="text-center mb-8">
+                    <span class="text-brand-lime uppercase text-xs tracking-widest font-bold">Studio Timings</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold uppercase text-white mt-1">
+                        Operating Hours
+                    </h2>
+                    <p class="text-brand-muted text-sm mt-2">
+                        Official listed business operating hours for Body Works Fitness Studio.
+                    </p>
+                </div>
+
+                <div class="divide-y divide-brand-border/60">
+                    <div class="py-4 flex items-center justify-between">
+                        <span class="font-medium text-white">Monday</span>
+                        <span class="font-semibold text-brand-lime font-mono text-sm sm:text-base">6:00 AM – 10:00 PM</span>
+                    </div>
+                    <div class="py-4 flex items-center justify-between">
+                        <span class="font-medium text-white">Tuesday</span>
+                        <span class="font-semibold text-brand-lime font-mono text-sm sm:text-base">6:00 AM – 10:00 PM</span>
+                    </div>
+                    <div class="py-4 flex items-center justify-between">
+                        <span class="font-medium text-white">Wednesday</span>
+                        <span class="font-semibold text-brand-lime font-mono text-sm sm:text-base">6:00 AM – 10:00 PM</span>
+                    </div>
+                    <div class="py-4 flex items-center justify-between">
+                        <span class="font-medium text-white">Thursday</span>
+                        <span class="font-semibold text-brand-lime font-mono text-sm sm:text-base">6:00 AM – 10:00 PM</span>
+                    </div>
+                    <div class="py-4 flex items-center justify-between">
+                        <span class="font-medium text-white">Friday</span>
+                        <span class="font-semibold text-brand-lime font-mono text-sm sm:text-base">6:00 AM – 10:00 PM</span>
+                    </div>
+                    <div class="py-4 flex items-center justify-between">
+                        <span class="font-medium text-white">Saturday</span>
+                        <span class="font-semibold text-brand-lime font-mono text-sm sm:text-base">6:00 AM – 10:00 PM</span>
+                    </div>
+                    <div class="py-4 flex items-center justify-between bg-brand-surface/40 px-3 -mx-3 rounded-lg">
+                        <span class="font-medium text-gray-400">Sunday</span>
+                        <span class="font-semibold text-red-400 text-sm sm:text-base uppercase tracking-wider">Closed</span>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <p class="text-xs text-brand-muted mb-4">
+                        Planning your workout or stopping by for an in-person tour?
+                    </p>
+                    <a href="tel:+919875476552" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-brand-surface border border-brand-border text-white text-xs uppercase font-semibold tracking-wider hover:border-brand-lime transition-colors">
+                        <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-lime"></i>
+                        Confirm Today's Hours With Studio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Visit Section -->
+    <section id="contact" class="py-20 bg-brand-surface border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Address & Contact Info -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div>
+                        <span class="text-brand-lime uppercase text-xs tracking-widest font-bold">Visit or Call</span>
+                        <h2 class="font-heading text-3xl sm:text-5xl font-bold uppercase tracking-tight text-white mt-1 mb-6">
+                            Start Your Fitness Journey
+                        </h2>
+                        <p class="text-brand-muted text-base mb-8 leading-relaxed">
+                            Visit Body Works Fitness Studio directly or contact the team by phone or WhatsApp to ask any questions about joining, training options, or studio timings.
+                        </p>
+
+                        <!-- Address Details Card -->
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center shrink-0 text-brand-lime">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading text-lg font-bold uppercase text-white">Location</h3>
+                                    <address class="not-italic text-sm text-gray-300 leading-relaxed mt-1">
+                                        47 Basudevpur Road, Behala,<br>
+                                        Beside Bakultala Bazar,<br>
+                                        Kolkata, West Bengal 700061, India
+                                    </address>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center shrink-0 text-brand-lime">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading text-lg font-bold uppercase text-white">Telephone</h3>
+                                    <p class="text-sm text-gray-300 mt-1 font-mono">
+                                        098754 76552
+                                    </p>
+                                    <span class="text-xs text-brand-muted">Available during studio hours</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-card border border-brand-border flex items-center justify-center shrink-0 text-brand-lime">
+                                    <i data-lucide="calendar" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading text-lg font-bold uppercase text-white">Days of Operation</h3>
+                                    <p class="text-sm text-gray-300 mt-1">
+                                        Monday through Saturday: 6:00 AM – 10:00 PM<br>
+                                        Sunday: Closed
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="mt-10 flex flex-col sm:flex-row gap-3">
+                        <a href="tel:+919875476552" class="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-brand-lime text-black font-heading font-bold uppercase text-base rounded-xl hover:bg-brand-limeHover transition-all">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            Call Studio
+                        </a>
+                        <a href="https://wa.me/919875476552" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-[#25D366] text-white font-heading font-bold uppercase text-base rounded-xl hover:opacity-90 transition-all">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?q=47+Basudevpur+Road,+Behala,+beside+Bakultala+Bazar,+Kolkata,+West+Bengal+700061" target="_blank" rel="noopener noreferrer" class="flex-1 flex items-center justify-center gap-2 px-5 py-3.5 bg-brand-card text-white border border-brand-border font-heading font-bold uppercase text-base rounded-xl hover:bg-brand-border transition-all">
+                            <i data-lucide="navigation" class="w-4 h-4 text-brand-lime"></i>
+                            Directions
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Interactive Anchor Block -->
+                <div class="lg:col-span-6">
+                    <div class="h-full min-h-[350px] rounded-3xl overflow-hidden border border-brand-border bg-brand-card flex flex-col">
+                        <!-- Simulated Map Interface Container -->
+                        <div class="relative flex-1 bg-brand-dark flex flex-col items-center justify-center p-8 text-center">
+                            <div class="w-16 h-16 rounded-full bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center mb-4">
+                                <i data-lucide="map-pinned" class="w-8 h-8 text-brand-lime"></i>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold uppercase text-white mb-2">Find Us in Behala</h3>
+                            <p class="text-sm text-brand-muted max-w-sm mb-6">
+                                Located on Basudevpur Road, conveniently beside Bakultala Bazar, Kolkata.
+                            </p>
+                            <a href="https://maps.google.com/?q=47+Basudevpur+Road,+Behala,+beside+Bakultala+Bazar,+Kolkata,+West+Bengal+700061" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-lime text-black font-bold uppercase tracking-wider text-sm hover:bg-brand-limeHover transition-all shadow-md">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                Open in Google Maps
+                            </a>
+                        </div>
+                        <!-- Bottom quick address label -->
+                        <div class="bg-brand-surface p-4 border-t border-brand-border flex items-center justify-between text-xs text-gray-400">
+                            <span>Postal Code: 700061</span>
+                            <span>Behala, Kolkata</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-12 border-t border-brand-border text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-12">
+                
+                <!-- Gym Details -->
+                <div>
+                    <h4 class="font-heading text-lg font-bold uppercase tracking-wider text-white mb-2">
+                        BODY WORKS <span class="text-brand-lime">FITNESS STUDIO</span>
+                    </h4>
+                    <p class="text-brand-muted text-xs leading-relaxed max-w-sm">
+                        47 Basudevpur Road, Behala, beside Bakultala Bazar, Kolkata, West Bengal 700061.
+                    </p>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-300 mb-3">Sections</h4>
+                    <ul class="space-y-1.5 text-xs text-brand-muted">
+                        <li><a href="#about" class="hover:text-brand-lime transition-colors">Studio Rating & Overview</a></li>
+                        <li><a href="#services" class="hover:text-brand-lime transition-colors">HIIT, CrossFit & Dance Fitness</a></li>
+                        <li><a href="#feedback" class="hover:text-brand-lime transition-colors">Public Feedback Summary</a></li>
+                        <li><a href="#schedule" class="hover:text-brand-lime transition-colors">Operating Hours</a></li>
+                        <li><a href="#contact" class="hover:text-brand-lime transition-colors">Directions & Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Verified Phone -->
+                <div>
+                    <h4 class="text-xs uppercase font-bold tracking-widest text-gray-300 mb-3">Direct Contact</h4>
+                    <p class="text-xs text-brand-muted mb-2">
+                        Phone: <a href="tel:+919875476552" class="text-white hover:text-brand-lime font-mono">098754 76552</a>
+                    </p>
+                    <p class="text-xs text-brand-muted">
+                        Hours: Monday–Saturday, 6:00 AM – 10:00 PM (Sunday Closed)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Accuracy Note Mandatory Section -->
+            <div class="pt-8 border-t border-brand-border/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+                <p>
+                    &copy; <span id="current-year"></span> BODY WORKS FITNESS STUDIO. All rights reserved.
+                </p>
+                <div class="bg-brand-surface px-3 py-2 rounded-lg border border-brand-border/50 text-[11px] text-gray-400 max-w-xl text-center md:text-right">
+                    <span class="text-gray-300 font-semibold">Listing Notice:</span> This website compiles publicly available business listing information (ratings, listed services, address, and hours) for Body Works Fitness Studio and should be reviewed by the gym administration before official publication.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons & Responsive Script -->
+    <script>
+        // Render Lucide SVG Icons
+        lucide.createIcons();
+
+        // Update Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on anchor click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
